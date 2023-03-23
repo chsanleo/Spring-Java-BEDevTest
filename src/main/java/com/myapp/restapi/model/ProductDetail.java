@@ -1,11 +1,9 @@
 package com.myapp.restapi.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NonNull;
+import lombok.*;
 
 @EqualsAndHashCode
+@NoArgsConstructor
 @AllArgsConstructor
 @Data
 public class ProductDetail {
