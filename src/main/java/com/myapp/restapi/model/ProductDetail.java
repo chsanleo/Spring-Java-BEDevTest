@@ -9,8 +9,9 @@ import lombok.NonNull;
 @AllArgsConstructor
 @Data
 public class ProductDetail {
+
     @NonNull
-    private String productId;
+    private String id;
     @NonNull
     private String name;
     @NonNull

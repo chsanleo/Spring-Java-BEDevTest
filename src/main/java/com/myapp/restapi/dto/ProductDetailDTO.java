@@ -11,7 +11,7 @@ import lombok.NonNull;
 public class ProductDetailDTO {
 
     @NonNull
-    private String productId;
+    private String id;
     @NonNull
     private String name;
     @NonNull
