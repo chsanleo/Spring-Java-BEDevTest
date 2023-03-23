@@ -6,5 +6,5 @@ import java.util.List;
 
 @Data
 public class SimilarProducts {
-    private List<ProductDetail> productDetail;
+    private List<String> productIds;
 }
