@@ -1,0 +1,20 @@
+package com.myapp.restapi.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NonNull;
+
+@EqualsAndHashCode
+@AllArgsConstructor
+@Data
+public class ProductDetail {
+    @NonNull
+    private String productId;
+    @NonNull
+    private String name;
+    @NonNull
+    private Float price;
+    @NonNull
+    private Boolean availability;
+}
