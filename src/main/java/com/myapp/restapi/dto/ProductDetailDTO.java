@@ -15,7 +15,7 @@ public class ProductDetailDTO {
     @NonNull
     private String name;
     @NonNull
-    private Float price;
+    private Double price;
     @NonNull
     private Boolean availability;
 }
