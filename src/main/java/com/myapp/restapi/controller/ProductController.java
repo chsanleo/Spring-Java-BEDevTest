@@ -1,6 +1,8 @@
 package com.myapp.restapi.controller;
 
 import com.myapp.restapi.dto.ProductDetailDTO;
+import com.myapp.restapi.exceptions.FormatNotValidException;
+import com.myapp.restapi.exceptions.ProductNotFoundException;
 import com.myapp.restapi.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,8 +26,11 @@ public class ProductController {
         try {
             var result = service.similarTo(productId);
             return new ResponseEntity<>(result, HttpStatus.OK);
-        } catch (Exception ex) {
+
+        } catch (ProductNotFoundException ex){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        } catch (FormatNotValidException ex){
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
     }
 }
