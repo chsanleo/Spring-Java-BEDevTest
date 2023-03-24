@@ -22,7 +22,7 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductInfoAPI api;
 
-    private ObjectMapper objectMapper;
+    private ObjectMapper objectMapper = new ObjectMapper();
 
     @Override
     public List<ProductDetailDTO> similarTo(String productId) throws ProductNotFoundException, FormatNotValidException {
