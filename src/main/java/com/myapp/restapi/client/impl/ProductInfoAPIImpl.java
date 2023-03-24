@@ -24,8 +24,12 @@ public class ProductInfoAPIImpl implements ProductInfoAPI {
 
         var restTemplate = new RestTemplate();
         try {
-            var response = restTemplate.getForObject(productsApi, String[].class);
-            return Arrays.asList(response);
+            var response = restTemplate.getForObject(productsApi, Integer[].class);
+
+            return Arrays.stream(response)
+                    .map(String::valueOf)
+                    .toList();
+
         } catch (HttpClientErrorException ex) {
             throw new ProductNotFoundException(ex.getMessage());
         }
