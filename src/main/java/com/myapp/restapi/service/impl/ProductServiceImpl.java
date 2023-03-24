@@ -31,8 +31,8 @@ public class ProductServiceImpl implements ProductService {
 
         var similarProducts = api.getSimilarProduct(productId);
 
-        if (CollectionUtils.isEmpty(api.getSimilarProduct(productId))){
-           throw new ProductNotFoundException("Not found for productId"+ productId);
+        if (CollectionUtils.isEmpty(similarProducts)){
+           throw new ProductNotFoundException("Not found for productId: "+ productId);
         }
 
         return similarProducts.stream()
